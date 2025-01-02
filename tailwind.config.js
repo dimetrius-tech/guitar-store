@@ -14,6 +14,18 @@ export default {
         backgroundColor: {
             'base-background': '#110E0E'
         },
+        fontSize: {
+            h1: 'var(--v-theme-font-size-h1)',
+            h2: 'var(--v-theme-font-size-h2)',
+            h3: 'var(--v-theme-font-size-h3)'
+        },
+        fontFamily: {
+            heading: ['Poppins', 'sans-serif'],
+        },
+        fontWeight: {
+            extrabold: '800',
+            bold: '600'
+        },
     },
   },
   plugins: [],

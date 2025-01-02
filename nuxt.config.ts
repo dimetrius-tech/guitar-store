@@ -4,6 +4,7 @@ import vuetify, {transformAssetUrls} from "vite-plugin-vuetify";
 export default defineNuxtConfig({
   alias: {
     '@images': './assets/img/',
+    "@fonts/*": "./assets/fonts/*",
   },
   build: {
     transpile: ['vuetify']

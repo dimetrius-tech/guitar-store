@@ -1,23 +1,23 @@
 <template>
-  <v-app class="rounded-md ">
-    <v-app-bar class="px-12 mt-3 mb-6">
+  <v-app class="rounded-md">
+    <v-app-bar class="px-12 mb-6">
       <v-app-bar-title>
         <img src="@images/Logo.png" alt="logo" />
       </v-app-bar-title>
       <v-spacer />
       <v-toolbar-items>
-        <v-btn text to="/">Home</v-btn>
-        <v-btn text to="/">Guitars</v-btn>
-        <v-btn text to="/">Guitar equipment</v-btn>
-        <v-btn text to="/">About us</v-btn>
-        <v-btn text to="/">Support</v-btn>
+        <v-btn variant="text" to="/">Home</v-btn>
+        <v-btn variant="text" to="/">Guitars</v-btn>
+        <v-btn variant="text" to="/">Guitar equipment</v-btn>
+        <v-btn variant="text" to="/">About us</v-btn>
+        <v-btn variant="text" to="/">Support</v-btn>
       </v-toolbar-items>
       <v-spacer />
       <v-btn icon="mdi-magnify"/>
       <v-btn icon="mdi-cart-outline"/>
     </v-app-bar>
 
-    <v-main class="d-flex align-center justify-center" style="min-height: 300px;">
+    <v-main class="d-flex mt-6" style="min-height: 300px;">
       <slot></slot>
     </v-main>
     <v-footer class="!px-12" app>

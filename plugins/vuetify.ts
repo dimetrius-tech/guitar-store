@@ -8,7 +8,13 @@ const GuitarTheme: ThemeDefinition = {
     colors: {
         background: '#110E0E',
         surface: '#110E0E'
-    }
+    },
+    variables: {
+        h1FontSize: '54px',
+        h2FontSize: '48px',
+        h3FontSize: '42px',
+        fontFamilyHeading: '"Poppins", sans-serif',
+    },
 }
 
 export default defineNuxtPlugin((nuxtApp) => {
