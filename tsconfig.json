@@ -4,8 +4,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@images/*": ["./assets/img/"],
-      "@fonts/*": ["./assets/fonts/*"],
+      "images/*": ["./assets/img/*.png"],
+      "fonts/*": ["./assets/fonts/*"],
     }
   }
 }
