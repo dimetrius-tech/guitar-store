@@ -1,0 +1,55 @@
+<script setup lang="ts">
+import {filename} from "pathe/utils";
+
+const glob = import.meta.glob('/assets/img/top-sales/*', {eager: true});
+const images = Object.fromEntries(
+    Object.entries(glob).map(([key, value]) => [filename(key), value.default])
+)
+const topGuitars = [
+  {
+    image: images['fender'],
+    name: 'Fender Strat DLX USA',
+    price: 1400,
+    inStock: true,
+    stars: 5
+  },
+  {
+    image: images['gibson'],
+    name: 'Gibson LP ST',
+    price: 1100,
+    inStock: true,
+    stars: 5
+  },
+  {
+    image: images['bacchus'],
+    name: 'Bacchus BPB-1R(CAR)',
+    price: 1100,
+    inStock: true,
+    stars: 5
+  },
+  {
+    image: images['hofner'],
+    name: '1960 Hofner 500/5 bass',
+    price: 1900,
+    inStock: true,
+    stars: 5
+  },
+]
+</script>
+
+<template>
+  <v-row class="py-5 px-12 ">
+    <v-col class="d-flex justify-center" cols="12">
+      <h3 class="text-h3 !font-heading text-bold text-uppercase">
+        <span class="text-accent">Top</span> Sales
+      </h3>
+    </v-col>
+  </v-row>
+  <v-row class="px-12">
+    <CardDesktop :cards="topGuitars" />
+  </v-row>
+</template>
+
+<style scoped>
+
+</style>
