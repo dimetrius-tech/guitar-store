@@ -21,7 +21,7 @@ const questions = [
 
 <template>
 <div>
-  <v-row class="py-5 px-12">
+  <v-row class="px-12">
     <v-expansion-panels>
       <v-expansion-panel v-for="(question, index) in questions" :key="index">
         <v-expansion-panel-title>

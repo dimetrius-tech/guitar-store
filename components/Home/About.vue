@@ -8,7 +8,7 @@ const images = Object.fromEntries(
 </script>
 
 <template>
-<v-row class="py-5 px-12">
+<v-row class=" px-12">
   <v-col cols="6">
     <img :src="images['about']" alt="about" width="590" height="266" />
   </v-col>

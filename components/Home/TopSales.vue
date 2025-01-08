@@ -38,14 +38,14 @@ const topGuitars = [
 </script>
 
 <template>
-  <v-row class="py-5 px-12 ">
+  <v-row class=" px-12 ">
     <v-col class="d-flex justify-center" cols="12">
-      <h3 class="text-h3 !font-heading text-bold text-uppercase">
+      <h3 class="h3-text-extra-bold !font-heading text-bold text-uppercase">
         <span class="text-accent">Top</span> Sales
       </h3>
     </v-col>
   </v-row>
-  <v-row class="px-12">
+  <v-row class="mt-0 px-12">
     <CardDesktop :cards="topGuitars" />
   </v-row>
 </template>

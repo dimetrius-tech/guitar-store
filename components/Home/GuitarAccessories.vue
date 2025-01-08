@@ -33,7 +33,7 @@ const accessories = [
 </script>
 
 <template>
-  <div class="py-5 px-16">
+  <div class="px-16">
     <v-row v-for="(accessory, index) in accessories" :key="index">
       <v-col cols="6">
         <h3 class="text-h3 !font-heading font-weight-bold text-additionalGray">{{accessory.title}}</h3>

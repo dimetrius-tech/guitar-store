@@ -10,6 +10,7 @@ const GuitarTheme: ThemeDefinition = {
         surface: '#110E0E',
         surfaceLight: '#FFFFFF',
         additionalGray: '#585050',
+        dark: '#000000'
     },
     variables: {
         h1FontSize: '54px',
@@ -37,7 +38,7 @@ export default defineNuxtPlugin((nuxtApp) => {
                 style: [{paddingBottom: '80px'}]
             },
             VTabs: {
-                style: [{borderBottom: '1px solid white'}, {marginBottom: '20px'}]
+                style: [{borderBottom: '2px solid white'}, {marginBottom: '20px'}]
             },
             VCard: {
                 style: [{backgroundColor: '#000000'}, {padding: '20px'}]
@@ -47,6 +48,9 @@ export default defineNuxtPlugin((nuxtApp) => {
             },
             VBtn:{
                 style: [{backgroundColor: '#110E0E'}]
+            },
+            VRow: {
+                style: [{marginTop: '80px'}]
             }
         }
     });
