@@ -3,11 +3,13 @@ import vuetify, {transformAssetUrls} from "vite-plugin-vuetify";
 
 export default defineNuxtConfig({
   alias: {
-    '@images': './assets/img/',
+    'images': './assets/img',
+    "fonts": "./assets/fonts/*",
   },
   build: {
     transpile: ['vuetify']
   },
+  css: ['./assets/css/main.css'],
   ssr: false,
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
@@ -18,13 +20,12 @@ export default defineNuxtConfig({
       config.plugins.push(vuetify({autoImport: true}))
     })
     },
-    '@nuxtjs/tailwindcss',
   ],
   vite: {
     vue: {
       template: {
         transformAssetUrls,
       }
-    }
+    },
   }
 })

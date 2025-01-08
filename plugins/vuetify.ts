@@ -7,8 +7,16 @@ import 'vuetify/styles';
 const GuitarTheme: ThemeDefinition = {
     colors: {
         background: '#110E0E',
-        surface: '#110E0E'
-    }
+        surface: '#110E0E',
+        surfaceLight: '#FFFFFF',
+        additionalGray: '#585050',
+    },
+    variables: {
+        h1FontSize: '54px',
+        h2FontSize: '48px',
+        h3FontSize: '42px',
+        fontFamily: '"Poppins", sans-serif',
+    },
 }
 
 export default defineNuxtPlugin((nuxtApp) => {
@@ -21,6 +29,26 @@ export default defineNuxtPlugin((nuxtApp) => {
                 GuitarTheme
             }
         },
+        defaults: {
+            VFooter: {
+                style: [{borderTop: '1px solid white'}]
+            },
+            VMain: {
+                style: [{paddingBottom: '80px'}]
+            },
+            VTabs: {
+                style: [{borderBottom: '1px solid white'}, {marginBottom: '20px'}]
+            },
+            VCard: {
+                style: [{backgroundColor: '#000000'}, {padding: '20px'}]
+            },
+            VExpansionPanel: {
+                style: [{backgroundColor: '#000000'}, {marginBottom: '30px'}, {padding: '20px'}]
+            },
+            VBtn:{
+                style: [{backgroundColor: '#110E0E'}]
+            }
+        }
     });
 
     nuxtApp.vueApp.use(vuetify);
