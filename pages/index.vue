@@ -8,13 +8,13 @@ import TopSales from "../components/Home/TopSales.vue";
 <template>
   <div class="mx-5">
     <v-divider class="border-opacity-100" />
-    <v-row class="py-5 px-12">
-      <v-col cols="10">
-        <h1 class="text-h1 !font-heading font-extrabold text-uppercase">
+    <v-row class="py-5 px-12 mt-0">
+      <v-col cols="7">
+        <h1 class="h1-text-extra-bold !font-heading font-extrabold text-uppercase">
           Emotion in every note - <span class="text-accent">the best guitars</span> for you
         </h1>
       </v-col>
-      <v-col class="m-auto text-center">
+      <v-col offset="2" class="text-center my-auto">
         <v-btn variant="outlined">Shop now</v-btn>
       </v-col>
     </v-row>
@@ -29,41 +29,41 @@ import TopSales from "../components/Home/TopSales.vue";
         <img class="m-auto" src="images/HomePageLogo.png" alt="HomePageLogo" />
       </v-col>
       <v-col>
-        <h2 class="text-h2 font-extrabold">500+</h2>
-        <p>thousands of instrumenst sold</p>
+        <h2 class="h2-text-extra-bold font-extrabold">500+</h2>
+        <p>thousands of instruments sold</p>
       </v-col>
       <v-col>
-        <h2 class="text-h2 font-extrabold">15</h2>
+        <h2 class="h2-text-extra-bold font-extrabold">15</h2>
         <p>years of work on the market</p>
       </v-col>
     </v-row>
     <v-row>
       <v-col cols="12" class="text-center">
-        <h3 class="text-h3 font-bold m-auto">Create Your Music: Choose <span class="text-accent">Your Guitar</span></h3>
+        <h3 class="h3-text-extra-bold font-bold m-auto">Create Your Music: Choose <span class="text-accent">Your Guitar</span></h3>
       </v-col>
       <v-col>
         <HomeGuitarTabs />
       </v-col>
     </v-row>
-    <v-row class="py-5 px-12">
+    <v-row class="px-12">
       <v-col cols="7">
-        <h3 class="text-h3 !font-heading font-bold text-uppercase">
+        <h3 class="h3-text-extra-bold !font-heading font-bold text-uppercase">
           Complete Your Sound: Choose <span class="text-accent">Guitar Accessories</span>
         </h3>
       </v-col>
     </v-row>
     <GuitarAccessories />
-    <v-row class="py-5 px-12">
+    <v-row class=" px-12">
       <v-col class="d-flex justify-center" cols="12">
-        <h3 class="text-h3 !font-heading text-bold text-uppercase">
+        <h3 class="h3-text-extra-bold !font-heading text-bold text-uppercase">
           Frequently Asked <span class="text-accent">Questions</span>
         </h3>
       </v-col>
     </v-row>
     <HomeFAQ />
-    <v-row class="py-5 px-12">
+    <v-row class=" px-12">
       <v-col cols="7">
-        <h3 class="text-h3 !font-heading text-bold w-75">
+        <h3 class="h3-text-extra-bold !font-heading text-bold w-75">
           "<span class="text-accent">About Us:</span> Passion for Guitars and Music"
         </h3>
       </v-col>

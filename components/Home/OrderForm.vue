@@ -64,9 +64,9 @@ const submit = (e) => {
 </script>
 
 <template>
-<v-row class="py-5 px-12">
+<v-row class="mx-12 px-6 py-6 bg-dark rounded-border">
   <v-col cols="4">
-    <h3 class="text-h3 font-bold m-auto w-66 pb-8">Placing the <span class="text-accent">Guitar Order</span></h3>
+    <h3 class="h3-text-extra-bold font-bold m-auto w-66 pb-8">Placing the <span class="text-accent">Guitar Order</span></h3>
     <p>You can get advice / place an order directly on the website through the feedback form or contact our manager (phone / telegram).</p>
   </v-col>
   <v-col cols="8">
@@ -99,5 +99,7 @@ const submit = (e) => {
 </template>
 
 <style scoped>
-
+.rounded-border {
+  border-radius: 16px;
+}
 </style>
