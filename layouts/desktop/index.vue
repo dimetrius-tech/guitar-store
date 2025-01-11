@@ -5,11 +5,11 @@
         <img src="images/Logo.png" alt="logo" />
       </v-app-bar-title>
       <v-spacer />
-        <v-btn variant="plain" :ripple="false" to="/">Home</v-btn>
-        <v-btn variant="plain" to="/">Guitars</v-btn>
-        <v-btn variant="plain" to="/">Guitar equipment</v-btn>
-        <v-btn variant="plain" to="/">About us</v-btn>
-        <v-btn variant="plain" to="/">Support</v-btn>
+        <v-nav-btn class="lg-text-bold" to="/">Home</v-nav-btn>
+        <v-nav-btn variant="plain" to="/">Guitars</v-nav-btn>
+        <v-nav-btn variant="plain" to="/">Guitar equipment</v-nav-btn>
+        <v-nav-btn variant="plain" to="/">About us</v-nav-btn>
+        <v-nav-btn variant="plain" to="/">Support</v-nav-btn>
       <v-spacer />
       <v-btn icon="mdi-magnify"/>
       <v-btn icon="mdi-cart-outline"/>
@@ -18,7 +18,7 @@
     <v-main class="d-flex my-6" style="min-height: 300px;">
       <slot></slot>
     </v-main>
-    <v-footer class="px-12">
+    <v-footer class="px-16">
         <v-row no-gutters class="!w-full !pb-6">
           <v-col cols="4">
             <img src="images/Logo.png" alt="logo" />

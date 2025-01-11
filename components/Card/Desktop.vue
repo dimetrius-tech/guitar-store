@@ -13,7 +13,7 @@ defineProps({
       <img width="237" :src="card.image" />
       <v-card-item>
         <v-card-title>{{card.name}}</v-card-title>
-        <v-card-subtitle>{{card.price}}$</v-card-subtitle>
+        <v-card-subtitle class="opacity-100">{{card.price}}$</v-card-subtitle>
       </v-card-item>
       <v-card-text>
         <div class="d-flex justify-space-between">
@@ -33,4 +33,11 @@ defineProps({
 </template>
 
 <style scoped>
+.v-btn {
+  border-color: #CFC934;
+}
+.v-btn:hover {
+  color: #000000 !important;
+  background-color: #CFC934;
+}
 </style>

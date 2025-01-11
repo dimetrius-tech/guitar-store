@@ -6,7 +6,7 @@ import TopSales from "../components/Home/TopSales.vue";
 </script>
 
 <template>
-  <div class="mx-5">
+  <div>
     <v-divider class="border-opacity-100" />
     <v-row class="py-5 px-12 mt-0">
       <v-col cols="7">
@@ -15,11 +15,11 @@ import TopSales from "../components/Home/TopSales.vue";
         </h1>
       </v-col>
       <v-col offset="2" class="text-center my-auto">
-        <v-btn variant="outlined">Shop now</v-btn>
+        <v-btn class="px-8" variant="outlined">Shop now</v-btn>
       </v-col>
     </v-row>
     <v-divider class="border-opacity-100" />
-    <v-row class="py-5">
+    <v-row class="py-5 mt-0">
       <v-col class="d-flex justify-center" cols="12">
         <img width="1240" height="449" src="images/home-banner.png" alt="home-banner" />
       </v-col>
@@ -64,7 +64,7 @@ import TopSales from "../components/Home/TopSales.vue";
     <v-row class=" px-12">
       <v-col cols="7">
         <h3 class="h3-text-extra-bold !font-heading text-bold w-75">
-          "<span class="text-accent">About Us:</span> Passion for Guitars and Music"
+          "<span class="h3-text-extra-bold text-accent">About Us:</span> Passion for Guitars and Music"
         </h3>
       </v-col>
     </v-row>

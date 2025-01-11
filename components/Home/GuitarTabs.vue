@@ -41,10 +41,10 @@ const guitars = [
 
 <template>
   <v-tabs v-model="activeTab" align-tabs="center" class="border-b-2">
-    <v-tab value="all" :class="{'font-bold': activeTab === 'all'}">All guitars</v-tab>
-    <v-tab value="electric" :class="{'font-bold': activeTab === 'electric'}">Electric guitars</v-tab>
-    <v-tab value="bass" :class="{'font-bold': activeTab === 'bass'}">Bass guitars</v-tab>
-    <v-tab value="classical" :class="{'font-bold': activeTab === 'classical'}">Classical guitars</v-tab>
+    <v-tab value="all" :class="{'lg-text-bold': activeTab === 'all'}">All guitars</v-tab>
+    <v-tab value="electric" :class="{'lg-text-bold': activeTab === 'electric'}">Electric guitars</v-tab>
+    <v-tab value="bass" :class="{'lg-text-bold': activeTab === 'bass'}">Bass guitars</v-tab>
+    <v-tab value="classical" :class="{'lg-text-bold': activeTab === 'classical'}">Classical guitars</v-tab>
   </v-tabs>
   <v-tabs-window v-model="activeTab">
     <v-tabs-window-item value="all">
@@ -63,5 +63,4 @@ const guitars = [
 </template>
 
 <style scoped>
-
 </style>
