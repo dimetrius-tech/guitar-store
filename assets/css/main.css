@@ -10,6 +10,17 @@
     font-weight: 800;
     font-style: normal;
 }
+@font-face {
+    font-family: 'Open Sans Regular';
+    src: url('../fonts/OpenSans-Regular.ttf');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Open Sans Bold';
+    src: url('../fonts/OpenSans-Bold.ttf');
+    font-weight: 800;
+    font-style: normal;
+}
 .text-accent {
     color: #CFC934;
 }
@@ -29,4 +40,39 @@
 .h3-text-extra-bold {
     font-family: 'Poppins Bold', sans-serif;
     font-size: 42px;
+}
+.xl-text-bold {
+    font-family: 'Open Sans Bold', sans-serif;
+    font-size: 24px!important;
+}
+.xl-text-regular {
+    font-family: 'Open Sans Regular', sans-serif;
+    font-size: 24px;
+}
+.lg-text-bold {
+    font-family: 'Open Sans Bold', sans-serif !important;
+    font-size: 18px !important;
+    font-weight: 800 !important;
+}
+.lg-text-regular {
+    font-family: 'Open Sans Regular', sans-serif;
+    font-size: 18px !important;
+}
+.md-text-bold {
+    font-family: 'Open Sans Bold', sans-serif;
+    font-size: 16px!important;
+}
+.md-text-regular {
+    font-family: 'Open Sans Regular', sans-serif;
+    font-size: 16px!important;
+}
+.sm-text-regular {
+    font-family: 'Open Sans Regular', sans-serif;
+    font-size: 12px!important;
+}
+span {
+    font-family: 'Open Sans Regular', sans-serif;
+}
+p {
+    font-family: 'Open Sans Regular', sans-serif;
 }

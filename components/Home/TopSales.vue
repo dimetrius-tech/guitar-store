@@ -41,7 +41,7 @@ const topGuitars = [
   <v-row class=" px-12 ">
     <v-col class="d-flex justify-center" cols="12">
       <h3 class="h3-text-extra-bold !font-heading text-bold text-uppercase">
-        <span class="text-accent">Top</span> Sales
+        <span class="text-accent h3-text-extra-bold">Top</span> Sales
       </h3>
     </v-col>
   </v-row>

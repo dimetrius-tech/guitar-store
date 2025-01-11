@@ -36,17 +36,17 @@ const accessories = [
   <div class="px-16">
     <v-row v-for="(accessory, index) in accessories" :key="index">
       <v-col cols="6">
-        <h3 class="text-h3 !font-heading font-weight-bold text-additionalGray">{{accessory.title}}</h3>
+        <h3 class="h3-text-extra-bold font-weight-bold text-additionalGray">{{accessory.title}}</h3>
       </v-col>
       <v-col cols="6">
-        <v-row>
-          <v-card class="d-flex flex-row-reverse justify-lg-space-between mb-10">
+        <v-row class="mt-0">
+          <v-card class="d-flex flex-row-reverse justify-lg-space-between mb-10 w-100">
               <div class="px-4" :class="{'order-2': index % 2 === 0}">
                 <img :src="accessory.image" width="358" height="263" :alt="accessory.name" />
               </div>
               <div>
                 <div class="d-flex justify-space-between mb-10">
-                  <span class="text-uppercase font-weight-bold">{{accessory.name}}</span>
+                  <span class="text-uppercase w-50 lg-text-bold font-weight-bold">{{accessory.name}}</span>
                   <span>{{accessory.type}}</span>
                 </div>
                 <p>{{accessory.description}}</p>

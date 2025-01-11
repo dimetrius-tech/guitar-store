@@ -66,7 +66,7 @@ const submit = (e) => {
 <template>
 <v-row class="mx-12 px-6 py-6 bg-dark rounded-border">
   <v-col cols="4">
-    <h3 class="h3-text-extra-bold font-bold m-auto w-66 pb-8">Placing the <span class="text-accent">Guitar Order</span></h3>
+    <h3 class="h3-text-extra-bold font-bold m-auto w-66 pb-8">Placing the <span class="h3-text-extra-bold text-accent">Guitar Order</span></h3>
     <p>You can get advice / place an order directly on the website through the feedback form or contact our manager (phone / telegram).</p>
   </v-col>
   <v-col cols="8">
@@ -74,7 +74,13 @@ const submit = (e) => {
       <v-container>
         <v-row>
           <v-col cols="6">
-            <v-text-field v-model="firstname" :rules="[requiredValidation, nameRule]" label="First name" required></v-text-field>
+            <v-text-field
+                v-model="firstname"
+                :rules="[requiredValidation, nameRule]"
+                label="First name"
+                required
+                class="no-border"
+            ></v-text-field>
           </v-col>
           <v-col cols="6">
             <v-text-field v-model="lastname" :rules="[requiredValidation, nameRule]" label="Last name" required></v-text-field>
@@ -101,5 +107,8 @@ const submit = (e) => {
 <style scoped>
 .rounded-border {
   border-radius: 16px;
+}
+.no-border >>> .v-input__control {
+  border-bottom: none !important;
 }
 </style>
