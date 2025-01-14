@@ -1,18 +1,24 @@
 <script setup lang="ts">
 import {filename} from "pathe/utils";
+import {computed} from "vue";
+import {useDisplay} from "vuetify";
 
 const glob = import.meta.glob('/assets/img/*', {eager: true});
 const images = Object.fromEntries(
     Object.entries(glob).map(([key, value]) => [filename(key), value.default])
 )
+const display = computed(() => useDisplay());
+const bannerWidth = computed(() => !display.value.mobile.value ? '590' : '320');
+const bannerHeight = computed(() => !display.value.mobile.value ? '266' : '159');
+const bannerSrc = computed(() => !display.value.mobile.value ? images['about'] : images['about-mobile']);
 </script>
 
 <template>
-<v-row class=" px-12">
-  <v-col cols="6">
-    <img :src="images['about']" alt="about" width="590" height="266" />
+<v-row class="px-md-12">
+  <v-col cols="12" md="6">
+    <img :src="bannerSrc" alt="about" :width="bannerWidth" :height="bannerHeight" />
   </v-col>
-  <v-col cols="6" class="text-h5">
+  <v-col cols="12" md="6" class="text-h5">
     <p class="pb-6">At Sick Fretboards , we live for music and share this passion with each of our customers.</p>
     <p class="pb-6">Our goal is to help you find the perfect instrument to inspire you to make great music.</p>
     <p>Join our family of musicians and discover the world of guitars with us!</p>

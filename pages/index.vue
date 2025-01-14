@@ -6,63 +6,67 @@ import TopSales from "../components/Home/TopSales.vue";
 </script>
 
 <template>
-  <div>
-    <v-divider class="border-opacity-100" />
-    <v-row class="py-5 px-12 mt-0">
-      <v-col cols="7">
-        <h1 class="h1-text-extra-bold !font-heading font-extrabold text-uppercase">
-          Emotion in every note - <span class="text-accent">the best guitars</span> for you
-        </h1>
-      </v-col>
-      <v-col offset="2" class="text-center my-auto">
-        <v-btn class="px-8" variant="outlined">Shop now</v-btn>
-      </v-col>
-    </v-row>
-    <v-divider class="border-opacity-100" />
-    <v-row class="py-5 mt-0">
-      <v-col class="d-flex justify-center" cols="12">
-        <img width="1240" height="449" src="images/home-banner.png" alt="home-banner" />
-      </v-col>
-    </v-row>
+  <v-container class="mx-0 w-100" fluid>
+    <HomeBanner />
     <v-row class="text-center">
       <v-col>
         <img class="m-auto" src="images/HomePageLogo.png" alt="HomePageLogo" />
       </v-col>
-      <v-col>
-        <h2 class="h2-text-extra-bold font-extrabold">500+</h2>
+      <v-col :class="{
+        'text-left': $vuetify.display.mobile,
+        'text-center': $vuetify.display.mdAndUp
+      }">
+        <h2 class="h2-text-extra-bold">500+</h2>
         <p>thousands of instruments sold</p>
       </v-col>
-      <v-col>
-        <h2 class="h2-text-extra-bold font-extrabold">15</h2>
+      <v-col :class="{
+        'text-left': $vuetify.display.mobile,
+        'text-center': $vuetify.display.mdAndUp
+      }">
+        <h2 class="h2-text-extra-bold">15</h2>
         <p>years of work on the market</p>
       </v-col>
     </v-row>
     <v-row>
       <v-col cols="12" class="text-center">
-        <h3 class="h3-text-extra-bold font-bold m-auto">Create Your Music: Choose <span class="text-accent">Your Guitar</span></h3>
+        <h3
+        :class="{
+          'h2-text-extra-bold': $vuetify.display.mobile,
+          'h3-text-extra-bold': $vuetify.display.mdAndUp
+        }"
+          class="font-bold m-auto"
+        >
+          Create Your Music: Choose <span class="h3-text-extra-bold text-accent">Your Guitar</span>
+        </h3>
       </v-col>
       <v-col>
         <HomeGuitarTabs />
       </v-col>
     </v-row>
-    <v-row class="px-12">
-      <v-col cols="7">
-        <h3 class="h3-text-extra-bold !font-heading font-bold text-uppercase">
-          Complete Your Sound: Choose <span class="text-accent">Guitar Accessories</span>
+    <v-row class="px-md-12">
+      <v-col cols="12" md="7">
+        <h3
+          :class="{
+          'text-uppercase': $vuetify.display.mdAndUp,
+           'text-capitalize': $vuetify.display.mobile
+        }"
+          class="h3-text-extra-bold !font-heading font-bold"
+        >
+          Complete Your Sound: Choose <span class="h3-text-extra-bold text-accent">Guitar Accessories</span>
         </h3>
       </v-col>
     </v-row>
     <GuitarAccessories />
-    <v-row class=" px-12">
+    <v-row class="px-md-12">
       <v-col class="d-flex justify-center" cols="12">
         <h3 class="h3-text-extra-bold !font-heading text-bold text-uppercase">
-          Frequently Asked <span class="text-accent">Questions</span>
+          Frequently Asked <span class="h3-text-extra-bold text-accent">Questions</span>
         </h3>
       </v-col>
     </v-row>
     <HomeFAQ />
-    <v-row class=" px-12">
-      <v-col cols="7">
+    <v-row class="px-md-12">
+      <v-col cols="12" md="7">
         <h3 class="h3-text-extra-bold !font-heading text-bold w-75">
           "<span class="h3-text-extra-bold text-accent">About Us:</span> Passion for Guitars and Music"
         </h3>
@@ -71,7 +75,7 @@ import TopSales from "../components/Home/TopSales.vue";
     <HomeAbout />
     <OrderForm />
     <TopSales />
-  </div>
+  </v-container>
 </template>
 
 <style scoped>

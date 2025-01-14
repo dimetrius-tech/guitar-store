@@ -7,6 +7,12 @@ const glob = import.meta.glob('/assets/img/guitars/*', {eager: true});
 const images = Object.fromEntries(
     Object.entries(glob).map(([key, value]) => [filename(key), value.default])
 )
+const categories = [
+  { name: 'All guitars', value: 'all'},
+  {name: 'Electric guitars', value: 'electric'},
+  {name: 'Bass guitars', value: 'bass'},
+  {name: 'Classical guitars', value: 'classical'}
+];
 const guitars = [
   {
     image: images['Admiral_Alba'],
@@ -41,23 +47,28 @@ const guitars = [
 
 <template>
   <v-tabs v-model="activeTab" align-tabs="center" class="border-b-2">
-    <v-tab value="all" :class="{'lg-text-bold': activeTab === 'all'}">All guitars</v-tab>
-    <v-tab value="electric" :class="{'lg-text-bold': activeTab === 'electric'}">Electric guitars</v-tab>
-    <v-tab value="bass" :class="{'lg-text-bold': activeTab === 'bass'}">Bass guitars</v-tab>
-    <v-tab value="classical" :class="{'lg-text-bold': activeTab === 'classical'}">Classical guitars</v-tab>
+    <v-tab
+        v-for="(category, index) in categories"
+        :key="index"
+        :value="category.value"
+        :class="{'lg-text-bold': activeTab === category.value}">
+      {{category.name}}
+    </v-tab>
   </v-tabs>
   <v-tabs-window v-model="activeTab">
-    <v-tabs-window-item value="all">
-      <CardDesktop :cards="guitars" />
-    </v-tabs-window-item>
-    <v-tabs-window-item value="electric">
-      <CardDesktop :cards="guitars" />
-    </v-tabs-window-item>
-    <v-tabs-window-item value="bass">
-      <CardDesktop :cards="guitars" />
-    </v-tabs-window-item>
-    <v-tabs-window-item value="classical">
-      <CardDesktop :cards="guitars" />
+    <v-tabs-window-item
+        v-for="(category, index) in categories"
+        :key="index"
+        :value="category.value"
+    >
+      <CardDesktop
+        v-if="$vuetify.display.mdAndUp"
+        :cards="guitars"
+      />
+      <CardMobile
+        v-else
+        :cards="guitars"
+      />
     </v-tabs-window-item>
   </v-tabs-window>
 </template>
