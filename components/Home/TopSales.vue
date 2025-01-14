@@ -38,15 +38,22 @@ const topGuitars = [
 </script>
 
 <template>
-  <v-row class=" px-12 ">
-    <v-col class="d-flex justify-center" cols="12">
+  <v-row class="px-md-12">
+    <v-col class="d-flex justify-center">
       <h3 class="h3-text-extra-bold !font-heading text-bold text-uppercase">
         <span class="text-accent h3-text-extra-bold">Top</span> Sales
       </h3>
     </v-col>
-  </v-row>
-  <v-row class="mt-0 px-12">
-    <CardDesktop :cards="topGuitars" />
+    <v-col cols="12" class="mt-0 px-md-12">
+      <CardDesktop
+          v-if="$vuetify.display.mdAndUp"
+          :cards="topGuitars"
+      />
+      <CardMobile
+          v-else
+          :cards="topGuitars"
+      />
+    </v-col>
   </v-row>
 </template>
 

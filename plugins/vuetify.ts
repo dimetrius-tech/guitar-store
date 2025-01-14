@@ -31,8 +31,12 @@ export default defineNuxtPlugin((nuxtApp) => {
         },
         aliases: {
             VNavBtn: components.VBtn,
+            VNavMobileBtn: components.VBtn,
         },
         defaults: {
+            VDivider: {
+                class: ['mx-n4', 'border-opacity-100'],
+            },
             VExpansionPanelTitle: {
                 class: ['xl-text-bold']
             },
@@ -45,6 +49,14 @@ export default defineNuxtPlugin((nuxtApp) => {
                 class: ['lg-text-regular', 'opacity-100'],
                 style: [{textTransform: 'capitalize'}]
             },
+            VNavMobileBtn: {
+                class: ['bg-dark', 'my-2'],
+                style: [
+                    {textTransform: 'capitalize'},
+                    {width: '210px'},
+                    {height: '40px'}
+                ]
+            },
             VFooter: {
                 class: ['lg-text-regular'],
                 style: [{borderTop: '1px solid white'}]
@@ -56,7 +68,15 @@ export default defineNuxtPlugin((nuxtApp) => {
                 VTab: {
                     class: ['lg-text-regular'],
                 },
-                style: [{borderBottom: '2px solid white'}, {marginBottom: '20px'}]
+                style: [
+                    {borderBottom: '2px solid white'},
+                    {marginBottom: '20px'}
+                ]
+            },
+            VCarousel: {
+                style: [
+                    {backgroundColor: '#110E0E'}
+                ],
             },
             VCard: {
                 VCardTitle: {
@@ -76,14 +96,19 @@ export default defineNuxtPlugin((nuxtApp) => {
                 },
                 style: [
                     {backgroundColor: '#000000'},
-                    {padding: '20px'},
+                    {margin: '20px'},
+                    {padding: '10px'},
                     {'width': '286px'},
                     {fontFamily: 'Open Sans Regular'},
                     {color: '#FFFFFF'}
                 ]
             },
             VExpansionPanel: {
-                style: [{backgroundColor: '#000000'}, {marginBottom: '30px'}, {padding: '20px'}]
+                style: [
+                    {backgroundColor: '#000000'},
+                    {marginBottom: '30px'},
+                    {padding: '20px'}
+                ]
             },
             VBtn:{
                 style: [{backgroundColor: '#110E0E'}],

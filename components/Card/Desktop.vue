@@ -25,7 +25,7 @@ defineProps({
           </div>
         </div>
         <div class="d-flex justify-center">
-          <v-btn variant="outlined" class="mt-3">Buy</v-btn>
+          <v-btn variant="outlined" class="mt-3 card-button">Buy</v-btn>
         </div>
       </v-card-text>
     </v-card>
@@ -33,11 +33,4 @@ defineProps({
 </template>
 
 <style scoped>
-.v-btn {
-  border-color: #CFC934;
-}
-.v-btn:hover {
-  color: #000000 !important;
-  background-color: #CFC934;
-}
 </style>

@@ -21,13 +21,17 @@ const questions = [
 
 <template>
 <div>
-  <v-row class="px-12">
+  <v-row class="px-md-12">
     <v-expansion-panels>
       <v-expansion-panel v-for="(question, index) in questions" :key="index">
         <v-expansion-panel-title>
           {{question.question}}
           <template v-slot:actions="{ expanded }">
-            <img width="40" height="40" :src="!expanded ? images['plus']: images['minus']" alt="expanded" />
+            <img
+                :width="$vuetify.display.mdAndUp ? 40 : 20"
+                :height="$vuetify.display.mdAndUp ? 40 : 20"
+                :src="!expanded ? images['plus']: images['minus']" alt="expanded"
+            />
           </template>
         </v-expansion-panel-title>
         <v-expansion-panel-text class="w-75">{{question.answer}}</v-expansion-panel-text>

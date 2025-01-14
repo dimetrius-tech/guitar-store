@@ -64,16 +64,16 @@ const submit = (e) => {
 </script>
 
 <template>
-<v-row class="mx-12 px-6 py-6 bg-dark rounded-border">
-  <v-col cols="4">
+<v-row class="mx-md-12 px-md-6 py-md-6 bg-md-dark rounded-border">
+  <v-col cols="12" md="4">
     <h3 class="h3-text-extra-bold font-bold m-auto w-66 pb-8">Placing the <span class="h3-text-extra-bold text-accent">Guitar Order</span></h3>
     <p>You can get advice / place an order directly on the website through the feedback form or contact our manager (phone / telegram).</p>
   </v-col>
-  <v-col cols="8">
+  <v-col cols="12" md="8">
     <v-form v-model="valid">
       <v-container>
         <v-row>
-          <v-col cols="6">
+          <v-col cols="12" md="6">
             <v-text-field
                 v-model="firstname"
                 :rules="[requiredValidation, nameRule]"
@@ -82,13 +82,13 @@ const submit = (e) => {
                 class="no-border"
             ></v-text-field>
           </v-col>
-          <v-col cols="6">
+          <v-col cols="12" md="6">
             <v-text-field v-model="lastname" :rules="[requiredValidation, nameRule]" label="Last name" required></v-text-field>
           </v-col>
-          <v-col cols="6">
+          <v-col cols="12" md="6">
             <v-text-field v-model="email" :rules="[requiredValidation, emailRules]" label="E-mail" required></v-text-field>
           </v-col>
-          <v-col cols="6">
+          <v-col cols="12" md="6">
             <v-text-field v-model="phone" :rules="[requiredValidation, phoneRules]" label="Phone number" required></v-text-field>
           </v-col>
           <v-col cols="12">

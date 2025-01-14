@@ -70,9 +70,29 @@
     font-family: 'Open Sans Regular', sans-serif;
     font-size: 12px!important;
 }
+.card-button {
+    border-color: #CFC934!important;
+}
+.card-button:hover {
+    color: #000000 !important;
+    background-color: #CFC934!important;
+}
 span {
     font-family: 'Open Sans Regular', sans-serif;
 }
 p {
     font-family: 'Open Sans Regular', sans-serif;
+}
+
+@media (max-width: 768px) {
+    .h1-text-extra-bold {
+        font-size: 32px;
+    }
+
+    .h2-text-extra-bold {
+        font-size: 30px;
+    }
+    .h3-text-extra-bold {
+        font-size: 26px;
+    }
 }
