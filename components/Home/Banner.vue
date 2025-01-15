@@ -24,18 +24,22 @@ const bannerSrc = computed(() => {
 
 <template>
   <v-divider v-if="$vuetify.display.mdAndUp" />
-  <v-row class="py-5 px-6 px-md-12 mt-0">
+  <v-row class="pt-5 mt-0">
     <v-col cols="12" md="7">
-      <h1 class="h1-text-extra-bold !font-heading font-extrabold text-left sm-text-capitalize md-text-uppercase">
+      <h1 class="h1-text-extra-bold !font-heading font-extrabold text-left">
         Emotion in every note - <span class="text-accent h1-text-extra-bold">the best guitars</span> for you
       </h1>
     </v-col>
-    <v-col md-offset="2" class="text-center my-auto">
+    <v-col
+        md-offset="2"
+        class="my-auto"
+        :class="{'text-center': $vuetify.display.mobile, 'text-right': $vuetify.display.mdAndUp}"
+    >
       <v-btn class="px-8 ma-auto" variant="outlined">Shop now</v-btn>
     </v-col>
   </v-row>
   <v-divider v-if="$vuetify.display.mdAndUp" />
-  <v-row class="py-5 mt-0">
+  <v-row class="pt-5 mt-0">
     <v-col class="d-flex justify-md-center" cols="12">
       <img :width="bannerWidth" :height="bannerHeight" :src="bannerSrc" alt="home-banner" class="ma-auto" />
     </v-col>

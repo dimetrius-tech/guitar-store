@@ -64,15 +64,25 @@ const submit = (e) => {
 </script>
 
 <template>
-<v-row class="mx-md-12 px-md-6 py-md-6 bg-md-dark rounded-border">
+<v-row class="py-md-6 rounded-border" :class="{'bg-dark': $vuetify.display.mdAndUp}">
   <v-col cols="12" md="4">
-    <h3 class="h3-text-extra-bold font-bold m-auto w-66 pb-8">Placing the <span class="h3-text-extra-bold text-accent">Guitar Order</span></h3>
+    <h3
+      class="font-bold m-auto pb-8"
+      :class="{'h3-text-extra-bold w-66': $vuetify.display.mdAndUp, 'h2-text-extra-bold w-75': $vuetify.display.mobile }"
+    >Placing the
+      <span
+        class="text-accent"
+        :class="{'h3-text-extra-bold': $vuetify.display.mdAndUp, 'h2-text-extra-bold': $vuetify.display.mobile }"
+      >
+        Guitar Order
+      </span>
+    </h3>
     <p>You can get advice / place an order directly on the website through the feedback form or contact our manager (phone / telegram).</p>
   </v-col>
   <v-col cols="12" md="8">
     <v-form v-model="valid">
       <v-container>
-        <v-row>
+        <v-row class="mt-6">
           <v-col cols="12" md="6">
             <v-text-field
                 v-model="firstname"
