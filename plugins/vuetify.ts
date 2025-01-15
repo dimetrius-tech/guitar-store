@@ -35,7 +35,7 @@ export default defineNuxtPlugin((nuxtApp) => {
         },
         defaults: {
             VDivider: {
-                class: ['mx-n4', 'border-opacity-100'],
+                class: ['mx-n14', 'border-opacity-100'],
             },
             VExpansionPanelTitle: {
                 class: ['xl-text-bold']

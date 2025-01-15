@@ -6,7 +6,7 @@ import TopSales from "../components/Home/TopSales.vue";
 </script>
 
 <template>
-  <v-container class="mx-0 w-100" fluid>
+  <v-container class="mx-0 px-4 px-md-14 w-100" fluid>
     <HomeBanner />
     <v-row class="text-center">
       <v-col>
@@ -43,7 +43,7 @@ import TopSales from "../components/Home/TopSales.vue";
         <HomeGuitarTabs />
       </v-col>
     </v-row>
-    <v-row class="px-md-12">
+    <v-row>
       <v-col cols="12" md="7">
         <h3
           :class="{
@@ -57,15 +57,18 @@ import TopSales from "../components/Home/TopSales.vue";
       </v-col>
     </v-row>
     <GuitarAccessories />
-    <v-row class="px-md-12">
+    <v-row>
       <v-col class="d-flex justify-center" cols="12">
-        <h3 class="h3-text-extra-bold !font-heading text-bold text-uppercase">
-          Frequently Asked <span class="h3-text-extra-bold text-accent">Questions</span>
+        <h3
+          class=" !font-heading text-bold"
+          :class="{'h3-text-extra-bold': $vuetify.display.mdAndUp, 'h2-text-extra-bold': $vuetify.display.mobile}"
+        >
+          Frequently Asked <span class="text-accent" :class="{'h3-text-extra-bold': $vuetify.display.mdAndUp, 'h2-text-extra-bold': $vuetify.display.mobile}">Questions</span>
         </h3>
       </v-col>
     </v-row>
     <HomeFAQ />
-    <v-row class="px-md-12">
+    <v-row>
       <v-col cols="12" md="7">
         <h3 class="h3-text-extra-bold !font-heading text-bold w-75">
           "<span class="h3-text-extra-bold text-accent">About Us:</span> Passion for Guitars and Music"

@@ -31,6 +31,7 @@
 .h1-text-extra-bold {
     font-family: 'Poppins Extra Bold', sans-serif;
     font-size: 54px;
+    text-transform: uppercase;
 }
 
 .h2-text-extra-bold {
@@ -87,6 +88,7 @@ p {
 @media (max-width: 768px) {
     .h1-text-extra-bold {
         font-size: 32px;
+        text-transform: capitalize;
     }
 
     .h2-text-extra-bold {

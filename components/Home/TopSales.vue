@@ -38,13 +38,13 @@ const topGuitars = [
 </script>
 
 <template>
-  <v-row class="px-md-12">
+  <v-row>
     <v-col class="d-flex justify-center">
       <h3 class="h3-text-extra-bold !font-heading text-bold text-uppercase">
         <span class="text-accent h3-text-extra-bold">Top</span> Sales
       </h3>
     </v-col>
-    <v-col cols="12" class="mt-0 px-md-12">
+    <v-col cols="12" class="mt-0">
       <CardDesktop
           v-if="$vuetify.display.mdAndUp"
           :cards="topGuitars"

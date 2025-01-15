@@ -46,7 +46,7 @@ const guitars = [
 </script>
 
 <template>
-  <v-tabs v-model="activeTab" align-tabs="center" class="border-b-2">
+  <v-tabs v-model="activeTab" align-tabs="center" class="border-b-2 mx-n4 mx-md-n14">
     <v-tab
         v-for="(category, index) in categories"
         :key="index"

@@ -14,11 +14,16 @@ const bannerSrc = computed(() => !display.value.mobile.value ? images['about'] :
 </script>
 
 <template>
-<v-row class="px-md-12">
-  <v-col cols="12" md="6">
+<v-row class="mt-8">
+  <v-col
+    cols="12"
+    md="6"
+    :order="$vuetify.display.mobile ? 'last' : 'first'"
+    :class="{'text-center': $vuetify.display.mobile, 'text-left': $vuetify.display.mdAndUp}"
+  >
     <img :src="bannerSrc" alt="about" :width="bannerWidth" :height="bannerHeight" />
   </v-col>
-  <v-col cols="12" md="6" class="text-h5">
+  <v-col cols="12" md="6">
     <p class="pb-6">At Sick Fretboards , we live for music and share this passion with each of our customers.</p>
     <p class="pb-6">Our goal is to help you find the perfect instrument to inspire you to make great music.</p>
     <p>Join our family of musicians and discover the world of guitars with us!</p>
@@ -27,5 +32,12 @@ const bannerSrc = computed(() => !display.value.mobile.value ? images['about'] :
 </template>
 
 <style scoped>
-
+p {
+  font-size: 24px;
+}
+@media (max-width: 768px) {
+  p {
+    font-size: 18px;
+  }
+}
 </style>

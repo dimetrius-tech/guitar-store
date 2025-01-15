@@ -8,7 +8,7 @@ defineProps({
 </script>
 
 <template>
-  <v-row class="d-flex justify-space-around">
+  <v-row class="d-flex justify-space-between">
     <v-card v-for="(card, index) in cards" :key="index">
       <img width="237" :src="card.image" />
       <v-card-item>
