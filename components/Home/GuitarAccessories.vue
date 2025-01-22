@@ -37,12 +37,12 @@ const accessories = [
 
 <template>
   <div>
-    <v-row v-for="(accessory, index) in accessories" :key="index" class="mt-6">
+    <v-row v-for="(accessory, index) in accessories" :key="index" class="mt-14">
       <v-col cols="12" md="5">
         <h3 class="h3-text-extra-bold font-weight-bold text-additionalGray">{{accessory.title}}</h3>
       </v-col>
       <v-col cols="12" md="7">
-        <v-row class="mt-0 position-relative accessory-card">
+        <v-row class="mt-0">
           <v-card
             :class="{'d-flex': $vuetify.display.mdAndUp}"
             class="flex-row-reverse justify-lg-space-between mb-10 w-100"
@@ -73,7 +73,7 @@ const accessories = [
               </div>
             </div>
           </v-card>
-          <div v-if="$vuetify.display.mdAndUp" class="d-flex justify-space-between w-100 position-absolute" style="bottom: 35px;">
+          <div v-if="$vuetify.display.mdAndUp" class="d-flex justify-space-between w-100">
             <div class="mt-n8 ml-n8">
               <img width="13" height="24" src="images/arrow-left.png" alt="arrow-left" />
             </div>
@@ -88,12 +88,5 @@ const accessories = [
 </template>
 
 <style scoped>
-.accessory-card {
-  width: 90% !important;
-}
-@media (max-width: 768px) {
-  .accessory-card {
-    width: 100% !important;
-  }
-}
+
 </style>
