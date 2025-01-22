@@ -36,8 +36,8 @@ const accessories = [
 </script>
 
 <template>
-  <div class="px-md-16">
-    <v-row v-for="(accessory, index) in accessories" :key="index">
+  <div>
+    <v-row v-for="(accessory, index) in accessories" :key="index" class="mt-14">
       <v-col cols="12" md="5">
         <h3 class="h3-text-extra-bold font-weight-bold text-additionalGray">{{accessory.title}}</h3>
       </v-col>

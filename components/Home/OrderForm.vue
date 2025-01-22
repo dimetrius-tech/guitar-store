@@ -64,7 +64,7 @@ const submit = (e) => {
 </script>
 
 <template>
-<v-row class="mx-md-12 px-md-6 py-md-6 bg-md-dark rounded-border">
+<v-row class="py-md-6 px-md-3 rounded-border" :class="{'bg-dark': $vuetify.display.mdAndUp}">
   <v-col cols="12" md="4">
     <h3 class="h3-text-extra-bold font-bold m-auto w-66 pb-8">Placing the <span class="h3-text-extra-bold text-accent">Guitar Order</span></h3>
     <p>You can get advice / place an order directly on the website through the feedback form or contact our manager (phone / telegram).</p>

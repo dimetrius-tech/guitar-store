@@ -42,13 +42,13 @@ const currentYear = new Date().getFullYear();
     </v-col>
     <v-col cols="2" offset="1">
       <v-list>
-        <v-list-item>
+        <v-list-item class="px-0">
           <v-list-item-title>Home</v-list-item-title>
         </v-list-item>
-        <v-list-item>
+        <v-list-item class="px-0">
           <v-list-item-title>Guitars</v-list-item-title>
         </v-list-item>
-        <v-list-item>
+        <v-list-item class="px-0">
           <v-list-item-title>About us</v-list-item-title>
         </v-list-item>
       </v-list>
@@ -63,13 +63,13 @@ const currentYear = new Date().getFullYear();
         </v-list-item>
       </v-list>
     </v-col>
-    <v-col offset="1" cols="2">
-      <v-list class="!float-right">
-        <v-list-item>
-          <v-list-item-title><v-icon icon="mdi-phone" class="!mr-2"/>(277)683-1980x5512</v-list-item-title>
+    <v-col offset="1" cols="2" class="text-end">
+      <v-list>
+        <v-list-item class="pr-4">
+          <v-list-item-title><v-icon icon="mdi-phone" class="mr-4"/>(277)683-1980x5512</v-list-item-title>
         </v-list-item>
-        <v-list-item>
-          <v-list-item-title><v-icon icon="mdi-email" class="!mr-2"/>sickfret113@gitm.com</v-list-item-title>
+        <v-list-item class="px-0">
+          <v-list-item-title><v-icon icon="mdi-email" class="mr-4"/>sickfret113@gitm.com</v-list-item-title>
         </v-list-item>
       </v-list>
     </v-col>
@@ -78,9 +78,9 @@ const currentYear = new Date().getFullYear();
         {{`${currentYear} All rights reserved`}}
       </div>
     </v-col>
-    <v-col>
+    <v-col offset="1">
       <div class="my-4 text-center">
-        <v-icon><img src="images/location.png" alt="location" /></v-icon>65632 Thomps Gotorway, West Triston 86626
+        <v-icon class="pr-4"><img src="images/location.png" alt="location" /></v-icon>65632 Thomps Gotorway, West Triston 86626
       </div>
     </v-col>
     <v-col>

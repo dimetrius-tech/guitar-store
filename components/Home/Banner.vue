@@ -24,9 +24,13 @@ const bannerSrc = computed(() => {
 
 <template>
   <v-divider v-if="$vuetify.display.mdAndUp" />
-  <v-row class="py-5 px-6 px-md-12 mt-0">
+  <v-row class="mt-0">
     <v-col cols="12" md="7">
-      <h1 class="h1-text-extra-bold !font-heading font-extrabold text-left sm-text-capitalize md-text-uppercase">
+      <h1 class="h1-text-extra-bold text-left"
+          :class="{
+            'text-capitalize': $vuetify.display.mobile,
+            'text-uppercase': $vuetify.display.mdAndUp
+      }">
         Emotion in every note - <span class="text-accent h1-text-extra-bold">the best guitars</span> for you
       </h1>
     </v-col>
@@ -35,7 +39,7 @@ const bannerSrc = computed(() => {
     </v-col>
   </v-row>
   <v-divider v-if="$vuetify.display.mdAndUp" />
-  <v-row class="py-5 mt-0">
+  <v-row class="py-7 mt-0">
     <v-col class="d-flex justify-md-center" cols="12">
       <img :width="bannerWidth" :height="bannerHeight" :src="bannerSrc" alt="home-banner" class="ma-auto" />
     </v-col>

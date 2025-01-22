@@ -115,7 +115,7 @@ export default defineNuxtPlugin((nuxtApp) => {
                 class: ['text-surfaceLight', 'opacity-100']
             },
             VRow: {
-                style: [{marginTop: '80px'}]
+                style: [{marginTop: '100px'}]
             },
         }
     });
