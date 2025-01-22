@@ -6,7 +6,7 @@ import TopSales from "../components/Home/TopSales.vue";
 </script>
 
 <template>
-  <v-container class="mx-0 w-100" fluid>
+  <v-container class="mx-0 w-100 px-14" fluid>
     <HomeBanner />
     <v-row class="text-center">
       <v-col>
